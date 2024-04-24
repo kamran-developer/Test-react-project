@@ -1,58 +1,57 @@
 export const Data = [
   {
-    title: 'Component',
-    description: 'Components are independent and reusable bits of code.',
+    title: 'Components',
+    description: 'The core UI building block - compose the user interface by combining multiple components.',
   },
   {
     title: 'JSX',
-    description: 'JSX stands for JavaScript XML. JSX allows us to write HTML in React.',
+    description: 'Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.',
   },
   {
     title: 'Props',
-    description: 'Props is a special keyword in React that stands for properties and is used for passing data from one component to another.',
+    description: 'Make components configurable (and therefore reusable) by passing input data to them.',
   },
   {
     title: 'State',
-    description: 'The state is a built-in React object that is used to contain data or information about the component.',
+    description: 'React-managed data which, when changed. couses the component to re-render & the UI to update.',
   }
 ]
 
 export const Contents = {
   Component: {
     title: 'Component',
-    description: 'Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.',
+    description: 'Components are the building blocks of React applications. A component is a self-contained module (HTML + optianal CSS + JS) that renders some output.',
     code: `
-    const CoreConsept = ({ title, description, img }) => {
+    const Welcome = () => {
       return (
-        <li className=''>
-          <img src={image} />
-          <h2 className='font-bold text-lg mt-3'>{title}</h2>
-          <p className='opacity-60'>{description}</p>
-        </li>
+        <h1>Hello, World</h1>
       )
     }
     
-    export default CoreConsept;`,
+    export default Welcome;`,
   },
   JSX: {
     title: 'JSX',
-    description: 'JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React.',
+    description: 'JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript (e.g., it may output dynamic content).',
     code: `
-    <menu className='flex gap-5 mb-5'>
-      <li><Button isActive={content.title === 'Component'} onChange={() => changeHandler('Component')}>Component</Button></li>
-      <li><Button isActive={content.title === 'JSX'} onChange={() => changeHandler('JSX')}>JSX</Button></li>
-      <li><Button isActive={content.title === 'Props'} onChange={() => changeHandler('Props')}>Props</Button></li>
-      <li><Button isActive={content.title === 'State'} onChange={() => changeHandler('State')}>State</Button></li>
+    <menu>
+      <li><Button onChange={() => changeHandler('Component')}>Component</Button></li>
+      <li><Button onChange={() => changeHandler('JSX')}>JSX</Button></li>
     </menu>`,
   },
   Props: {
     title: 'Props',
-    description: 'Props is a special keyword in React that stands for properties and is used for passing data from one component to another.',
-    code: ``,
+    description: 'Components accept arbitrary inputs called props. they are like function arguments.',
+    code: `
+    const Welcome = (props) => {
+      return (
+        <h1>Hello, {props.name}</h1>
+      )
+    }`,
   },
   State: {
     title: 'State',
-    description: 'The state is a built-in React object that is used to contain data or information about the component.',
+    description: 'State allows React components to change their output over time in response to user actions, network responses, and anything else.',
     code: `
     const [content, setContent] = useState({});
 
