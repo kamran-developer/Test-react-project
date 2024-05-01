@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Section from "./Sections/Section"
-import { Data, Contents } from './../data'
+import { Data, Contents } from '../data'
 import TabButton from "./Buttons/TabButton";
 import Tabs from "./Tab/Tabs";
 

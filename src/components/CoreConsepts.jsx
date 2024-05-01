@@ -1,5 +1,5 @@
 import SectionContent from "./Sections/SectionContent";
-import { Data, Contents } from './../data'
+import { Data, Contents } from '../data'
 import CoreConsept from "./CoreConsept/CoreConsept";
 
 const CoreConsepts = () => {
